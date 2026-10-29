@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Water Tank Visualizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Water Tank Visualizer</h1>
+    <p>Enter non-negative block heights separated by commas to see how much rainwater they trap.</p>
+    <form id="tank-form">
+      <label for="heights">Block heights</label>
+      <div class="controls">
+        <input id="heights" value="0,4,0,0,0,6,0,6,4,0" autocomplete="off" aria-describedby="error" />
+        <button type="submit">Calculate</button>
+      </div>
+      <p id="error" role="alert" class="error"></p>
+    </form>
+    <section class="result" aria-live="polite">
+      <h2>Trapped water: <span id="total">18</span> units</h2>
+      <div class="legend"><span><i class="swatch block"></i> Block</span><span><i class="swatch water"></i> Water</span></div>
+      <div id="visualization" class="visualization"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
